@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LUH Auto Login</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        width: 320px;
+        margin: 0;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 18px;
+        margin: 0 0 14px;
+      }
+      label {
+        display: block;
+        margin-top: 12px;
+        font-weight: 600;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 6px;
+        box-sizing: border-box;
+      }
+      .row {
+        margin-top: 14px;
+      }
+      .row label {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-weight: 400;
+        margin-top: 0;
+      }
+      .actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-top: 16px;
+      }
+      button {
+        padding: 8px 12px;
+      }
+      #status {
+        min-height: 18px;
+        font-size: 13px;
+      }
+      #open-options {
+        margin-left: auto;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LUH Auto Login</h1>
+
+    <label for="username">LUH-ID</label>
+    <input id="username" type="text" autocomplete="username">
+
+    <label for="password">WebSSO Password</label>
+    <input id="password" type="password" autocomplete="current-password">
+
+    <div class="row">
+      <label>
+        <input id="enabled" type="checkbox">
+        Enable auto-fill
+      </label>
+    </div>
+
+    <div class="row">
+      <label>
+        <input id="autoSubmit" type="checkbox">
+        Auto-submit login form
+      </label>
+    </div>
+
+    <div class="actions">
+      <button id="save" type="button">Save</button>
+      <a id="open-options" href="#">Full settings</a>
+    </div>
+
+    <div id="status"></div>
+
+    <script src="settings.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

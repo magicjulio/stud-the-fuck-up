@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "LUH SSO Auto Login",
+  "version": "1.0.0",
+  "description": "Auto-fills and optionally submits the LUH SSO login form.",
+  "icons": {
+    "16": "extension_logo.svg",
+    "32": "extension_logo.svg",
+    "48": "extension_logo.svg",
+    "96": "extension_logo.svg"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://studip.uni-hannover.de/*",
+    "https://sso.idm.uni-hannover.de/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://studip.uni-hannover.de/dispatch.php/login*",
+        "https://sso.idm.uni-hannover.de/idp/profile/SAML2/Redirect/SSO*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "extension_logo.svg",
+      "32": "extension_logo.svg"
+    },
+    "default_title": "LUH SSO Auto Login",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LUH Auto Login Settings</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 0 16px;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .header img {
+        width: 128px;
+        height: auto;
+        flex: 0 0 auto;
+      }
+      .header h1 {
+        margin: 0;
+      }
+      label {
+        display: block;
+        margin-top: 16px;
+        font-weight: 600;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 6px;
+        box-sizing: border-box;
+      }
+      .row {
+        margin-top: 16px;
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-top: 20px;
+      }
+      button {
+        padding: 10px 14px;
+      }
+      #reset {
+        background: transparent;
+        border: 1px solid #999;
+        color: #444;
+      }
+      #status {
+        margin-top: 12px;
+        min-height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="luh_logo.svg" alt="Leibniz University Hannover logo">
+      <h1>LUH Auto Login</h1>
+    </div>
+
+    <label for="username">LUH-ID</label>
+    <input id="username" type="text">
+
+    <label for="password">WebSSO Password</label>
+    <input id="password" type="password">
+
+    <div class="row">
+      <label>
+        <input id="enabled" type="checkbox">
+        Enable auto-fill
+      </label>
+    </div>
+
+    <div class="row">
+      <label>
+        <input id="autoSubmit" type="checkbox">
+        Auto-submit login form
+      </label>
+    </div>
+
+    <div class="actions">
+      <button id="save" type="button">Save</button>
+      <button id="reset" type="button">Reset</button>
+    </div>
+    <div id="status"></div>
+    <small style="color: #666; margin-top: 24px; display: block;">by <a href="https://github.com/magicjulio" style="color: #666;">Julius</a></small>
+
+    <script src="settings.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
