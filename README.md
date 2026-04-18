@@ -14,8 +14,8 @@ Firefox extension for Leibniz University Hannover that:
 
 ## Installation In Firefox
 
-[Download the Firefox extension file (`23519ab361db418587e0-1.0.0.xpi`)](./23519ab361db418587e0-1.0.0.xpi)
-Double click it (idk)
+- [Download the Firefox extension (.xpi)](https://github.com/magicjulio/stud-the-fuck-up/raw/main/23519ab361db418587e0-1.0.0.xpi?raw=1)
+
 
 
 ## Usage
