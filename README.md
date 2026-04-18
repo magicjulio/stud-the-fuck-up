@@ -8,30 +8,15 @@ Firefox extension for Leibniz University Hannover that:
 
 ## Features
 
-- toolbar popup for quick setup
-- full settings page
+- toolbar popup for quick setup / full settings page
 - starts from `https://studip.uni-hannover.de/dispatch.php/login#/`
-- extension and page branding assets included
 - reset button for clearing saved settings
-
-## Security Note
-
-This extension stores the LUH-ID and WebSSO password in Firefox extension local storage on your machine.
-
-- It is not encrypted by this extension.
-- Only install and use it on a machine and Firefox profile you trust.
 
 ## Installation In Firefox
 
-This project is currently intended for local loading in Firefox.
+[Download the Firefox extension file (`23519ab361db418587e0-1.0.0.xpi`)](./23519ab361db418587e0-1.0.0.xpi)
+Double click it (idk)
 
-1. Download or clone this repository.
-2. Open Firefox.
-3. Go to `about:debugging#/runtime/this-firefox`.
-4. Click `Load Temporary Add-on...`.
-5. Select the `manifest.json` file from this project.
-6. Click the extension icon in the Firefox toolbar.
-7. Enter your LUH-ID and WebSSO password, then click `Save`.
 
 ## Usage
 
@@ -39,6 +24,13 @@ This project is currently intended for local loading in Firefox.
 2. The extension redirects to the LUH Shibboleth login flow.
 3. It fills your credentials on the SSO page.
 4. If `Auto-submit login form` is enabled, it submits the SSO form once automatically.
+
+## Security Note
+
+This extension stores the LUH-ID and WebSSO password in Firefox extension local storage on your machine.
+
+- It is not encrypted by this extension.
+- Only install and use it on a machine and Firefox profile you trust.
 
 ## Settings
 
